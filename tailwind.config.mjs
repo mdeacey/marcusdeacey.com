@@ -12,67 +12,6 @@ export default {
         sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
         serif: ["Work Sans", ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        // Semantic color system - centralized color control
-        bg: {
-          primary: {
-            light: 'stone-100',
-            dark: 'stone-900',
-          },
-          secondary: {
-            light: 'stone-100/75',
-            dark: 'stone-900/25',
-          },
-          surface: {
-            light: 'stone-200',
-            dark: 'stone-800',
-          },
-          elevated: {
-            light: 'stone-100',
-            dark: 'stone-900',
-          },
-        },
-        text: {
-          primary: {
-            light: 'black/50',
-            dark: 'white/75',
-          },
-          heading: {
-            light: 'black',
-            dark: 'white',
-          },
-          accent: {
-            light: 'black',
-            dark: 'white',
-          },
-        },
-        border: {
-          primary: {
-            light: 'black/15',
-            dark: 'white/20',
-          },
-          subtle: {
-            light: 'black/10',
-            dark: 'white/10',
-          },
-        },
-        decoration: {
-          primary: {
-            light: 'black/15',
-            dark: 'white/30',
-          },
-          hover: {
-            light: 'black/25',
-            dark: 'white/50',
-          },
-        },
-        interactive: {
-          hover: {
-            light: 'black/5',
-            dark: 'white/5',
-          },
-        },
-      },
       fontSize: {
         // Complete Tailwind font scale (matching official defaults)
         'xs': ['0.75rem', { lineHeight: '1rem' }],          // 12px

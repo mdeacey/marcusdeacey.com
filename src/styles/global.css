@@ -2,68 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Centralized color system - light mode */
-  --bg-primary: theme('colors.bg.primary.light');
-  --bg-secondary: theme('colors.bg.secondary.light');
-  --bg-surface: theme('colors.bg.surface.light');
-  --bg-elevated: theme('colors.bg.elevated.light');
-
-  --text-primary: theme('colors.text.primary.light');
-  --text-heading: theme('colors.text.heading.light');
-  --text-accent: theme('colors.text.accent.light');
-
-  --border-primary: theme('colors.border.primary.light');
-  --border-subtle: theme('colors.border.subtle.light');
-
-  --decoration-primary: theme('colors.decoration.primary.light');
-  --decoration-hover: theme('colors.decoration.hover.light');
-
-  --interactive-hover: theme('colors.interactive.hover.light');
-}
-
-html.dark {
-  /* Centralized color system - dark mode */
-  --bg-primary: theme('colors.bg.primary.dark');
-  --bg-secondary: theme('colors.bg.secondary.dark');
-  --bg-surface: theme('colors.bg.surface.dark');
-  --bg-elevated: theme('colors.bg.elevated.dark');
-
-  --text-primary: theme('colors.text.primary.dark');
-  --text-heading: theme('colors.text.heading.dark');
-  --text-accent: theme('colors.text.accent.dark');
-
-  --border-primary: theme('colors.border.primary.dark');
-  --border-subtle: theme('colors.border.subtle.dark');
-
-  --decoration-primary: theme('colors.decoration.primary.dark');
-  --decoration-hover: theme('colors.decoration.hover.dark');
-
-  --interactive-hover: theme('colors.interactive.hover.dark');
-}
-
-/* Utility classes for common color patterns */
-@layer utilities {
-  .bg-primary { background-color: var(--bg-primary); }
-  .bg-secondary { background-color: var(--bg-secondary); }
-  .bg-surface { background-color: var(--bg-surface); }
-  .bg-elevated { background-color: var(--bg-elevated); }
-
-  .text-primary { color: var(--text-primary); }
-  .text-heading { color: var(--text-heading); }
-  .text-accent { color: var(--text-accent); }
-
-  .border-primary { border-color: var(--border-primary); }
-  .border-subtle { border-color: var(--border-subtle); }
-
-  .decoration-primary { text-decoration-color: var(--decoration-primary); }
-  .decoration-hover { text-decoration-color: var(--decoration-hover); }
-
-  .hover-bg-primary:hover { background-color: var(--interactive-hover); }
-  .hover-text-accent:hover { color: var(--text-accent); }
-  .hover-decoration-hover:hover { text-decoration-color: var(--decoration-hover); }
-}
-
 html {
   overflow-y: scroll;
   color-scheme: light;
@@ -82,13 +20,12 @@ body {
 body {
   @apply font-sans antialiased;
   @apply flex flex-col;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  @apply bg-stone-100 text-black/50 dark:bg-stone-900 dark:text-white/75;
 }
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
-  background-color: var(--bg-secondary);
+  @apply bg-stone-100/75 dark:bg-stone-900/25;
   @apply backdrop-blur-sm saturate-200;
 }
 
@@ -103,7 +40,7 @@ footer {
 article {
   @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
   @apply prose-headings:font-semibold prose-p:font-sans;
-  color: var(--text-heading);
+  @apply text-black dark:text-white;
 }
 
 /* Override heading sizes in articles - using Tailwind font scale */
@@ -140,11 +77,11 @@ article td {
 /* Override code fonts in articles */
 article code {
   @apply text-sm font-mono px-1 py-0.5 rounded;
-  background-color: var(--bg-surface);
+  @apply bg-stone-200 dark:bg-stone-800;
 }
 article pre {
   @apply text-sm font-mono p-4 rounded-lg overflow-x-auto;
-  background-color: var(--bg-elevated);
+  @apply bg-stone-100 dark:bg-stone-900;
 }
 article pre code {
   @apply text-sm font-mono px-0 py-0;
@@ -154,12 +91,12 @@ article pre code {
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;
-    text-decoration-color: var(--decoration-primary);
+    @apply decoration-black/15 dark:decoration-white/30;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
-    color: var(--text-accent);
-    text-decoration-color: var(--decoration-hover);
+    @apply text-black dark:text-white;
+    @apply decoration-black/25 dark:decoration-white/50;
   }
 }
 

@@ -32,7 +32,7 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h1 class="animate font-semibold text-heading text-5xl">
+    <h1 class="animate font-semibold text-black dark:text-white text-5xl">
       Hi, I'm Nano <span class="text-xl">👋🏻</span>
     </h1>
     <div class="space-y-16">
@@ -65,7 +65,7 @@ const work = await Promise.all(
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h3 class="font-semibold text-heading text-3xl">
+          <h3 class="font-semibold text-black dark:text-white text-3xl">
             Latest posts
           </h3>
           <Link href="/blog">
@@ -83,7 +83,7 @@ const work = await Promise.all(
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h3 class="font-semibold text-heading text-3xl">
+          <h3 class="font-semibold text-black dark:text-white text-3xl">
             Work Experience
           </h3>
           <Link href="/work">
@@ -96,7 +96,7 @@ const work = await Promise.all(
               <div class="text-sm opacity-75">
                 {dateRange(entry.data.dateStart, entry.data.dateEnd)}
               </div>
-              <div class="font-semibold text-heading">
+              <div class="font-semibold text-black dark:text-white">
                 {entry.data.company}
               </div>
               <div class="text-sm opacity-75">
@@ -112,7 +112,7 @@ const work = await Promise.all(
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h3 class="font-semibold text-heading text-3xl">
+          <h3 class="font-semibold text-black dark:text-white text-3xl">
             Recent projects
           </h3>
           <Link href="/projects">
@@ -129,7 +129,7 @@ const work = await Promise.all(
       </section>
 
       <section class="animate space-y-4">
-        <h3 class="font-semibold text-heading text-3xl">
+        <h3 class="font-semibold text-black dark:text-white text-3xl">
           Let's Connect
         </h3>
         <article>
